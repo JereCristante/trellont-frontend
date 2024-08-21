@@ -1,0 +1,14 @@
+<single-spa-router>
+  <nav>
+    <application name="@app/navbar"></application>
+  </nav>
+  
+  <main>
+    <route default>
+      <application name="@trellont/home"></application>
+    </route>
+    <route path="/auth">
+      <application name="@app/auth"></application>
+    </route>
+  </main>
+</single-spa-router>

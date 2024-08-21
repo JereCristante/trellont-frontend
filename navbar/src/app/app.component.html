@@ -1,0 +1,26 @@
+<nav class="w-full p-2 bg-[#09814A] h-[60px] absolute z-10 flex justify-center items-center">
+  <img src="https://w7.pngwing.com/pngs/748/14/png-transparent-green-brain-illustration-logo-brain-euclidean-portrait-of-brain-material-lines-text-people-happy-birthday-vector-images.png" style="max-width: 100%; max-height: 100%; border-radius: 50%;">
+  <h3 style="margin: 10px; font-weight: bold;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif; color: #EBF5EE;"> TRELLON'T</h3>
+  @if (isOnline) {
+  <a class="bg-purple-100 hover:bg-purple-200 text-black font-medium hover:font-black px-4 py-1 mx-4 rounded" href='/'
+    onclick="singleSpaNavigate(event)">
+    HOME
+  </a>
+  <button class="bg-purple-100 hover:bg-purple-200 text-black font-medium hover:font-black px-4 py-1 mx-4 rounded"
+    type="button" (click)="signout()">
+    SIGNOUT
+  </button>
+  }
+  @if (!isOnline) {
+  <a class="bg-purple-100 hover:bg-purple-200 text-black font-medium hover:font-black px-4 py-1 mx-4 rounded"
+    href='/auth' onclick="singleSpaNavigate(event)">
+    LOGIN
+  </a>
+  <a class="bg-purple-100 hover:bg-purple-200 text-black font-medium hover:font-black px-4 py-1 mx-4 rounded"
+    href='/auth#/register' onclick="singleSpaNavigate(event)">
+    REGISTER
+  </a>
+  }
+</nav>
